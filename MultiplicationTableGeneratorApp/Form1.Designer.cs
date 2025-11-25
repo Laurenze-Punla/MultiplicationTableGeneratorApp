@@ -32,20 +32,22 @@
             this.lbTable = new System.Windows.Forms.ListBox();
             this.lblInstructions = new System.Windows.Forms.Label();
             this.pnlHeader = new System.Windows.Forms.Panel();
-            this.btnExit = new System.Windows.Forms.Button();
-            this.btnGenerate = new System.Windows.Forms.Button();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
+            this.nudDimensions = new System.Windows.Forms.NumericUpDown();
+            this.btnGenerate = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             this.pnlHeader.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudDimensions)).BeginInit();
             this.SuspendLayout();
             // 
             // lbTable
             // 
+            this.lbTable.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.lbTable.FormattingEnabled = true;
+            this.lbTable.ItemHeight = 25;
             this.lbTable.Location = new System.Drawing.Point(12, 102);
             this.lbTable.Name = "lbTable";
-            this.lbTable.Size = new System.Drawing.Size(450, 446);
+            this.lbTable.Size = new System.Drawing.Size(450, 404);
             this.lbTable.TabIndex = 0;
             this.lbTable.SelectedIndexChanged += new System.EventHandler(this.lbTable_SelectedIndexChanged);
             // 
@@ -65,7 +67,7 @@
             // 
             this.pnlHeader.BackColor = System.Drawing.Color.Transparent;
             this.pnlHeader.Controls.Add(this.label1);
-            this.pnlHeader.Controls.Add(this.numericUpDown1);
+            this.pnlHeader.Controls.Add(this.nudDimensions);
             this.pnlHeader.Controls.Add(this.lblInstructions);
             this.pnlHeader.Controls.Add(this.btnGenerate);
             this.pnlHeader.Controls.Add(this.btnExit);
@@ -74,6 +76,57 @@
             this.pnlHeader.Name = "pnlHeader";
             this.pnlHeader.Size = new System.Drawing.Size(474, 88);
             this.pnlHeader.TabIndex = 5;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(7, 48);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(93, 25);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "NUMBER";
+            // 
+            // nudDimensions
+            // 
+            this.nudDimensions.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.nudDimensions.Dock = System.Windows.Forms.DockStyle.Right;
+            this.nudDimensions.Font = new System.Drawing.Font("Segoe UI", 48F, System.Drawing.FontStyle.Bold);
+            this.nudDimensions.Location = new System.Drawing.Point(106, 0);
+            this.nudDimensions.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.nudDimensions.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudDimensions.Name = "nudDimensions";
+            this.nudDimensions.Size = new System.Drawing.Size(98, 89);
+            this.nudDimensions.TabIndex = 5;
+            this.nudDimensions.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // btnGenerate
+            // 
+            this.btnGenerate.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnGenerate.FlatAppearance.BorderSize = 0;
+            this.btnGenerate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGenerate.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGenerate.ForeColor = System.Drawing.Color.White;
+            this.btnGenerate.Location = new System.Drawing.Point(204, 0);
+            this.btnGenerate.Name = "btnGenerate";
+            this.btnGenerate.Size = new System.Drawing.Size(175, 88);
+            this.btnGenerate.TabIndex = 4;
+            this.btnGenerate.Text = "GENERATE";
+            this.btnGenerate.UseVisualStyleBackColor = true;
+            this.btnGenerate.Click += new System.EventHandler(this.btnGenerate_Click);
             // 
             // btnExit
             // 
@@ -91,62 +144,12 @@
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // btnGenerate
-            // 
-            this.btnGenerate.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnGenerate.FlatAppearance.BorderSize = 0;
-            this.btnGenerate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGenerate.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGenerate.ForeColor = System.Drawing.Color.White;
-            this.btnGenerate.Location = new System.Drawing.Point(185, 0);
-            this.btnGenerate.Name = "btnGenerate";
-            this.btnGenerate.Size = new System.Drawing.Size(194, 88);
-            this.btnGenerate.TabIndex = 4;
-            this.btnGenerate.Text = "GENERATE";
-            this.btnGenerate.UseVisualStyleBackColor = true;
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.numericUpDown1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.numericUpDown1.Font = new System.Drawing.Font("Segoe UI", 48F, System.Drawing.FontStyle.Bold);
-            this.numericUpDown1.Location = new System.Drawing.Point(106, 0);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.numericUpDown1.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(79, 89);
-            this.numericUpDown1.TabIndex = 5;
-            this.numericUpDown1.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(7, 48);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 25);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "NUMBER";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(474, 560);
+            this.ClientSize = new System.Drawing.Size(474, 518);
             this.Controls.Add(this.pnlHeader);
             this.Controls.Add(this.lbTable);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -155,7 +158,7 @@
             this.Text = "Multiplication Table Generator";
             this.pnlHeader.ResumeLayout(false);
             this.pnlHeader.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudDimensions)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -167,7 +170,7 @@
         private System.Windows.Forms.Panel pnlHeader;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnGenerate;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown nudDimensions;
         private System.Windows.Forms.Label label1;
     }
 }
